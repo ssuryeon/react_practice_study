@@ -1,30 +1,12 @@
-import Content from './Components/Content';
-import {styled, createGlobalStyle} from 'styled-components';
-
-const Wrapper = styled.div`
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  background-color: #ccc;
-`;
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-  }
-`;
+import {Routes, Route} from 'react-router-dom';
+import NewsPage from './pages/NewsPage';
 
 function App() {
   return (
-    <>
-      <GlobalStyle />
-      <Wrapper>
-        <Content />
-      </Wrapper>
-    </>
+    <Routes>
+      <Route path='/' element={<NewsPage />} />
+      <Route path='/:category' element={<NewsPage />} />
+    </Routes>
   )
 }
 
