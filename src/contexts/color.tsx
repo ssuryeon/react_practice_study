@@ -1,6 +1,6 @@
 import React, {createContext, useState} from 'react';
 
-interface ColorContextType {
+export interface ColorContextType {
     state: {
         color: string;
         subcolor: string;
